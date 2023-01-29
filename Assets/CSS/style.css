@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    margin: 15px;
+    color: rgb(116, 49, 179);
+}
+
+
+.container{
+    text-align: center;
+    box-shadow: 5px 5px gray;
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+}
+
+.container h1{
+    margin: 20px;
+    font-family: cursive;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.container p{
+    margin: 10px;
+
+}
+
+#Answer1,
+#Answer2,
+#Answer3,
+#Answer4{
+    display: block;
+    padding: 5px;
+    margin: 10px;
+    background-color:rgb(116, 49, 179);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px grey;
+}
