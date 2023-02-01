@@ -2,7 +2,7 @@
     //event listener
     //a timer will start
 //user is presented with a question
-//user selects one multiple choice question
+//user selects one multiple choice answer
     //IF answer is wrong, decrement the timer
         //Display that the user choice was incorrect, then move to next question
     //IF answer is correct
@@ -32,6 +32,7 @@
     var startButton = document.querySelector(".startButton");
     var timerElement = document.querySelector(".timer-count");
     var questionSpace = document.querySelector(".questionSpace");
+    var startScreen = document.querySelector(".start-screen");
     var timer;
     var timerCount;
 
@@ -51,7 +52,10 @@
     function startQuiz(){
         timerCount = 60;
         startTimer();
-
+        hideStartScreen();
+        showQuestion();
+        
+        
     };
 
     function startTimer(){
@@ -63,9 +67,25 @@
             }
         }, 1000);
     };
+
+    function showQuestion(){
+        if(questionSpace.style.display === "none"){
+            questionSpace.style.display = "block";
+        } else {
+            questionSpace.style.display = "none";
+        }
+    }
+
+    function hideStartScreen(){
+        if(startScreen.style.display === "block"){
+            startScreen.style.display = "none";
+        } else {
+            startScreen.style.display = "block";
+        }
+    }
        
         
     
         
 
-    startButton.addEventListener("click", startQuiz);
+    startButton.addEventListener('click', startQuiz);

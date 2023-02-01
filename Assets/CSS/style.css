@@ -1,0 +1,29 @@
+.questionSpace{
+    display: none;
+}
+
+#timer{
+    display:block;
+    font-size: 88px;
+    margin-right: 108px
+}
+
+h3{
+    margin-right: 33px
+}
+
+
+#timer,
+h3{
+    text-align: right;
+    
+}
+.start-screen,
+.container{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+
+

@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz About Code!</title>
     <link rel="stylesheet" href="./Assets/CSS/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./Assets/CSS/style.css">
 </head>
 <body>
-    <button class="startButton">Start</button>
-    <span class="large-font timer-count">60</span>
+    <div class="start-screen">
+        <H2>Answer questions before the timer runs out!</H2>
+        <button class="startButton">Start</button>
+    </div>
+    
+    <span class="timer-count" id="timer">60</span>
     <h3>seconds remaining</h3>
 
     <section class="container">
-        <div class="questionSpace"></div>
+        <div class="questionSpace">This is my question questionSpace</div>
     </section>
 
     <script src="./Assets/JS/script.js"></script>
