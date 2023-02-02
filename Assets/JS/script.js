@@ -42,6 +42,30 @@ var score = 0;
 var endScreen = document.querySelector(".endGame");
 var correctOrWrong = document.querySelector(".correctOrWrong");
 var nextButton = document.querySelector(".nextQuestion");
+var scoreDisplay = document.querySelector(".score");
+var submitButton = document.querySelector(".submit");
+var scoreSheet = document.querySelector(".scoreSheet")
+
+function displayScore(){
+    localStorage.setItem("score", JSON.stringify(score));
+        var score = JSON.parse(localStorage.getItem("score"));
+        if(score !== null){
+            scoreSheet.textContent = score;
+        }
+    }
+
+submitButton.addEventListener('click',function(event){
+    event.preventDefault();
+    displayScore();
+    
+    // function displayScore(){
+    // localStorage.setItem("Score", JSON.stringify(score));
+    //     var score = JSON.parse(localStorage.getItem("score"));
+    //     if(score !== null){
+    //         scoreSheet.textContent = score;
+    //     }
+    // }
+});
 
 startButton.addEventListener('click', startQuiz);
 // buttonSpace.addEventListener('click', correctOrWrong);
@@ -149,10 +173,12 @@ function hideStartScreen() {
 }
 function endQuiz() {
     clearInterval(timer);
+    scoreDisplay.textContent === score;
 endScreen.classList.remove("hide");
 startScreen.classList.add("hide");
 questionSpace.classList.add("hide");
 buttonSpace.classList.add("hide");
+nextButton.classList.add("hide");
 }
 
 
