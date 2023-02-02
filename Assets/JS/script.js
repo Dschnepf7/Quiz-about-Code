@@ -40,9 +40,12 @@ var timerCount = 10;
 var questionNumber = 0;
 var score = 0;
 var endScreen = document.querySelector(".endGame");
+var correctOrWrong = document.querySelector(".correctOrWrong");
+var nextButton = document.querySelector(".nextQuestion");
 
 startButton.addEventListener('click', startQuiz);
 // buttonSpace.addEventListener('click', correctOrWrong);
+nextButton.addEventListener('click', nextScreen)
 
 var questions = [
     {
@@ -113,17 +116,25 @@ function checkAnswer(){
     // display "correct" or "wrong"
     console.log("check answer");
     if(this.textContent === questions[questionNumber].answer){
-        console.log("correct");
         score++;
-    } else {console.log("wrong")};
+        correctOrWrong.classList.remove("hide");
+        correctOrWrong.textContent = "Correct! "+"Your score is: " + score;
+    } else {
+        correctOrWrong.textContent = "Wrong!";
+    };
+    // questionNumber++;
+    // if(questions.length === questionNumber){
+    //     endQuiz();
+    // } else {showQuestion()};
+
+}
+    
+function nextScreen(){
     questionNumber++;
     if(questions.length === questionNumber){
         endQuiz();
     } else {showQuestion()};
-
 }
-    
-
     
 
 function hideStartScreen() {
@@ -138,8 +149,10 @@ function hideStartScreen() {
 }
 function endQuiz() {
     clearInterval(timer);
-    // show end screen 
-    // hide questions
+endScreen.classList.remove("hide");
+startScreen.classList.add("hide");
+questionSpace.classList.add("hide");
+buttonSpace.classList.add("hide");
 }
 
 
