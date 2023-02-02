@@ -1,5 +1,5 @@
 .questionSpace{
-    display: none;
+    /* display: none; */
 }
 
 #timer{
@@ -13,10 +13,9 @@ h3{
 }
 
 
-#timer,
+
 h3{
     text-align: right;
-    
 }
 .start-screen,
 .container{
@@ -25,5 +24,12 @@ h3{
     text-align: center;
 }
 
+.buttonSpace{
+    /* display: none; */
+}
 
+.hide{
+    display: none;
+
+}
 

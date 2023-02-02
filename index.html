@@ -15,11 +15,25 @@
         <button class="startButton">Start</button>
     </div>
     
-    <span class="timer-count" id="timer">60</span>
-    <h3>seconds remaining</h3>
+    
+    <h3><span class="timer-count" id="timer">10</span> seconds remaining</h3>
 
-    <section class="container">
-        <div class="questionSpace">This is my question questionSpace</div>
+    <section class="container hide">
+        <div class="questionSpace"></div>
+        <div class="buttonSpace">
+            <button>Answer 1</button>
+            <button>Answer 2</button>  
+            <button>Answer 3</button>
+            <button>Answer 4</button>
+        </div>
+        <div class="correctOrWrong"></div>
+    </section>
+
+    <section class="endGame hide">
+        <!-- add input and submit buttons
+        and display score with initials -->
+        <input type="initials">
+        <button>submit</button>
     </section>
 
     <script src="./Assets/JS/script.js"></script>
